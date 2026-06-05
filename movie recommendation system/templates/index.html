@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixHub - Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/background.jpg') }}'); 
+             background-size: cover; 
+             background-position: center; 
+             background-repeat: no-repeat; 
+             background-attachment: fixed; 
+             height: 100vh; margin: 0;">
+
+    <div class="container">
+        <h1>FlixHub Movie Recommendation</h1>
+        <input type="text" id="movieInput" placeholder="Enter a movie or TV show">
+        <button onclick="getRecommendation()">Get Recommendations</button>
+
+        <div class="results">
+            <h2>Recommended Movies:</h2>
+            <div id="moviesList" class="grid"></div>
+
+            <h2>Recommended TV Shows:</h2>
+            <div id="tvShowsList" class="grid"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
+
+
+
